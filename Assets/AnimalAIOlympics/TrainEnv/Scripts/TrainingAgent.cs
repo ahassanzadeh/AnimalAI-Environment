@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -48,6 +48,8 @@ public class TrainingAgent : Agent, IPrefab
     private Color[] _allBlackImage;
     private PlayerControls _playerScript;
 
+    public GameObject goodgoal;
+    private float reward_distance;
     public override void InitializeAgent()
     {
         _area = GetComponentInParent<TrainingArea>();
